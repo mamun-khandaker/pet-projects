@@ -21,6 +21,11 @@ const Tours = () => {
     }
   }
 
+  const removeTour = (id) => {
+    const newTour = tours.filter(tour => tour.id !== id);
+    setTours(newTour);
+  }
+
   useEffect(() => {
     fetchTours();
   }, [])
@@ -32,11 +37,19 @@ const Tours = () => {
   return (
     <div className="tour-main">
       <h2 className="title">
-        <span>Our Tours</span>
+        <span>
+          {tours.length === 0 ? 'No tours left' : `Our Tours - ${tours.length}`}
+        </span>
       </h2>
 
       <div className="tour-list">
-        {tours.map(tour => <SingleTour key={tour.id} tour={tour} />)}
+        {tours.length === 0 && (
+          <div className="tour-nil">
+            <button className="button" onClick={fetchTours}>Refresh</button>
+          </div>
+        )}
+        
+        {tours.map(tour => <SingleTour key={tour.id} {...tour} removeTour={removeTour} />)}
       </div>
     </div>
   )

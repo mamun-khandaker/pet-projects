@@ -154,6 +154,19 @@ header {
   &:hover {
     background: rgba(0, 0, 0, 0.1);
   }
+
+  &-text {
+    padding: 0 10px;
+    background: none;
+    color: lighten(#1a345e, 20);
+    font-size: 14px;
+    font-weight: bold;
+
+    &:hover {
+      background: initial;
+      color: #1a345e;
+    }
+  }
 }
 
 .loader {

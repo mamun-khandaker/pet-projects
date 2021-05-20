@@ -8,7 +8,7 @@ const ProjectDetails = [
 
   {
     name: 'Tours',
-    image: 'images/test_image_2.jpeg',
+    image: 'images/tours.png',
     path: '/tours',
     id: 2
   },

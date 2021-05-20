@@ -10,6 +10,10 @@ const BirthdayReminder = () => {
     setData([]);
   }
 
+  const refresh = () => {
+    setData(BirthdayData)
+  }
+
   return (
     <div className="birthday-reminder">
       <h2 className="title">
@@ -21,7 +25,7 @@ const BirthdayReminder = () => {
 
         <BirthdayList people={data} />
 
-        <button className="button" onClick={handleClick}>Clear All</button>
+        {data.length === 0 ? <button className="button" onClick={refresh}>Refresh</button> : <button className="button" onClick={handleClick}>Clear All</button>}
       </div>
     </div>
   )
