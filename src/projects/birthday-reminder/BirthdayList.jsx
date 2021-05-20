@@ -5,15 +5,17 @@ const BirthdayList = ({ people }) => {
     <>
       {
         people.map(person => {
+          const { id, image, name, age } = person;
+
           return (
-            <div key={person.id} className="birthday-list">
+            <div key={id} className="birthday-list">
               <div className="birthday-avatar">
-                <img src={person.image} alt={person.name} />
+                <img src={image} alt={name} />
               </div>
 
               <div className="birthday-details">
-                <h4>{person.name}</h4>
-                <p>{person.age} years old</p>
+                <h4>{name}</h4>
+                <p>{age} years old</p>
               </div>
             </div>
           )

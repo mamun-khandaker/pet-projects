@@ -1,14 +1,14 @@
 const ProjectDetails = [
   {
     name: 'Birthday Reminder',
-    image: 'images/test_image.jpeg',
+    image: 'images/birthday_reminder.png',
     path: '/birthday-reminder',
     id: 1
   },
 
   {
     name: 'Tours',
-    image: 'images/test_image_2.jpeg',
+    image: 'images/tours.png',
     path: '/tours',
     id: 2
   },
