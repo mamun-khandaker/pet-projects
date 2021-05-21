@@ -22,7 +22,8 @@ const SingleTour = ({ title, body, id, removeTour }) => {
           </svg>
         </button>
 
-        <img src="images/dummy_nature.jpg" alt="nature" />
+        {/* <img src="images/dummy_nature.jpg" alt="nature" /> */}
+        <img src="https://picsum.photos/700/300" alt="nature" />
       </div>
 
       <div className="tour-details">
