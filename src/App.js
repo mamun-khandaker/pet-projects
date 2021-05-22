@@ -4,6 +4,7 @@ import Home from './components/Home';
 import BirthdayReminder from './projects/birthday-reminder/BirthdayReminder';
 import Tours from './projects/tours/Tours';
 import Reviews from './projects/reviews/Reviews';
+import Accordion from './projects/accordion/Accordion';
 import UnderConstruction from './components/UnderConstruction';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/birthday-reminder" component={BirthdayReminder} />
           <Route path="/tours" component={Tours} />
           <Route path="/reviews" component={Reviews} />
+          <Route path="/accordion" component={Accordion} />
           <Route component={UnderConstruction} />
         </Switch>
       </div>
