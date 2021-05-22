@@ -1,7 +1,7 @@
 import './accordion.scss';
 import React from 'react';
-import AccordionData from './AccordionData';
 import SingleAccordion from './SingleAccordion';
+import AccordionData from './AccordionData';
 
 const Accordion = () => {
   return (
