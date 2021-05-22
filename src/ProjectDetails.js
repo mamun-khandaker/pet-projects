@@ -22,7 +22,7 @@ const ProjectDetails = [
 
   {
     name: 'Accordion',
-    image: 'images/test_image_2.jpeg',
+    image: 'images/accordion.png',
     path: '/accordion',
     id: 4
   },
