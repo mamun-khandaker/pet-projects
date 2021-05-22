@@ -15,7 +15,7 @@ const ProjectDetails = [
 
   {
     name: 'Reviews',
-    image: 'images/test_image.jpeg',
+    image: 'images/reviews.png',
     path: '/reviews',
     id: 3
   },

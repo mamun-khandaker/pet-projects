@@ -9,11 +9,13 @@ const ProjectList = () => {
     <section className="project-list">
       {
         state.map(project => {
+          const { id, path, name, image } = project;
+
           return (
-            <Link key={project.id} to={project.path} className="project">
-              <h2 className="project-header">{project.name}</h2>
+            <Link key={id} to={path} className="project">
+              <h2 className="project-header">{name}</h2>
               <div className="project-details">
-                <img src={project.image} alt={project.name} />
+                <img src={image} alt={name} />
               </div>
             </Link>
           )
