@@ -3,7 +3,7 @@ const reviewData = [
     id: 1,
     name: 'Mamun',
     job: 'Web Developer',
-    avatar: 'https://randomuser.me/api/portraits/men/56.jpg',
+    avatar: 'https://randomuser.me/api/portraits/men/57.jpg',
     text: 'Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.'
   },
 
@@ -35,8 +35,8 @@ const reviewData = [
     id: 5,
     name: 'Michel Obama',
     job: 'Housewife',
-    avatar: 'https://randomuser.me/api/portraits/women/30.jpg',
-    text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    avatar: 'https://randomuser.me/api/portraits/women/40.jpg',
+    text: 'Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
   }
 ]
 
