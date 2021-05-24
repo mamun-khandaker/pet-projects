@@ -1,72 +1,36 @@
 import './menu.scss';
-import React from  'react';
+import React, { useState } from  'react';
+import MenuData from './MenuData';
+import SingleMenu from './SingleMenu';
+import Categories from './Categories';
+
+const allCategories = ['All', ...new Set(MenuData.map(cat => cat.category))];
 
 const Menu = () => {
+  const [menuItems, setMenuItems] = useState(MenuData);
+  const [categories] = useState(allCategories);
+
+  const filterItem = (category) => {
+    if(category === 'All') {
+      setMenuItems(MenuData);
+      return;
+    }
+
+    const newCategory = MenuData.filter(filtered => filtered.category === category);
+    setMenuItems(newCategory);
+  }
+
   return (
     <div className="menu-main">
-      <h2 class="title">
+      <h2 className="title">
         <span>Our Food Menu</span>
       </h2>
 
       <div className="menu-holder">
-        <ul className="menu-names">
-          <li>All</li>
-          <li>Breakfast</li>
-          <li>Lunch</li>
-          <li>Shakes</li>
-        </ul>
+        <Categories filterItem={filterItem} categories={categories} />
 
         <div className="menu">
-          <div className="menu-item">
-            <div className="menu-image">
-              <img src="https://static.toiimg.com/photo/67092798.cms" alt="image" />
-            </div>
-
-            <div className="menu-details">
-              <h4 className="menu-title">
-                Food title
-                <span className="menu-price">$100</span>
-              </h4>
-
-              <div className="menu-text">
-                I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed 
-              </div>
-            </div>
-          </div>
-
-          <div className="menu-item">
-            <div className="menu-image">
-              <img src="https://static.toiimg.com/photo/67092798.cms" alt="image" />
-            </div>
-
-            <div className="menu-details">
-              <h4 className="menu-title">
-                Food title
-                <span className="menu-price">$100</span>
-              </h4>
-
-              <div className="menu-text">
-                I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed
-              </div>
-            </div>
-          </div>
-
-          <div className="menu-item">
-            <div className="menu-image">
-              <img src="https://static.toiimg.com/photo/67092798.cms" alt="image" />
-            </div>
-
-            <div className="menu-details">
-              <h4 className="menu-title">
-                Food title
-                <span className="menu-price">$100</span>
-              </h4>
-
-              <div className="menu-text">
-                I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed
-              </div>
-            </div>
-          </div>
+          <SingleMenu items={menuItems} />
         </div>
       </div>
     </div>
