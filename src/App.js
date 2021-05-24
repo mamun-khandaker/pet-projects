@@ -6,6 +6,7 @@ import Tours from './projects/tours/Tours';
 import Reviews from './projects/reviews/Reviews';
 import Accordion from './projects/accordion/Accordion';
 import UnderConstruction from './components/UnderConstruction';
+import Menu from './projects/menu/Menu';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/tours" component={Tours} />
           <Route path="/reviews" component={Reviews} />
           <Route path="/accordion" component={Accordion} />
+          <Route path="/menu" component={Menu} />
           <Route component={UnderConstruction} />
         </Switch>
       </div>
