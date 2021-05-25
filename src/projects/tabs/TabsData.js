@@ -2,6 +2,7 @@ const TabsData = [
   {
     id: 'abc1',
     order: 3,
+    name: 'Mamun Khandaker',
     title: 'Full Stack Web Developer',
     dates: 'December 2015 - Present',
     company: 'Monstarlab Bangladesh',
@@ -15,6 +16,7 @@ const TabsData = [
   {
     id: 'abc2',
     order: 2,
+    name: 'Arif Hasan',
     title: 'Front-End Engineer',
     dates: 'May 2015 - December 2015',
     company: 'Welldev Bangladesh',
@@ -29,6 +31,7 @@ const TabsData = [
   {
     id: 'abc3',
     order: 1,
+    name: 'Hridoy Sinha',
     title: 'Engineering Intern',
     dates: 'May 2014 - September 2015',
     company: 'Microsoft Corporation',
