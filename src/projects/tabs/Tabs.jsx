@@ -4,11 +4,11 @@ import TabsDetails from './TabsDetails';
 import TabsData from './TabsData';
 
 const Tabs = () => {
-  const [data] = useState(TabsData);
-  const [id, setId] = useState('');
+  const [jobs] = useState(TabsData);
+  const [value, setValue] = useState(0);
 
-  const showTabs = (id) => {
-    setId(id)
+  const showTabs = (index) => {
+    setValue(index);
   }
 
   return (
@@ -20,16 +20,15 @@ const Tabs = () => {
       <div className="tabs-holder">
         <ul className="tabs">
           {
-            data.map(newData => {
-              const activeClass = newData.id === id ? 'active' : '';
-              return (
-                <li className={activeClass} key={newData.id} onClick={() => showTabs(newData.id)}>{newData.name}</li>
+            jobs.map((item, index) => {
+            return (
+                <li className={value === index ? 'active' : ''} key={item.id} onClick={() => showTabs(index)}>{item.name}</li>
               )
             })
           }
         </ul>
 
-        <TabsDetails data={data} id={id} />
+        <TabsDetails newData={jobs[value]} />
       </div>
     </div>
   )
