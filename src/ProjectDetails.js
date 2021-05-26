@@ -29,9 +29,16 @@ const ProjectDetails = [
 
   {
     name: 'Menu',
-    image: 'images/test_image.jpeg',
+    image: 'images/menu.png',
     path: '/menu',
     id: 5
+  },
+
+  {
+    name: 'Tabs',
+    image: 'images/test_image.jpeg',
+    path: '/tabs',
+    id: 6
   }
 ]
 
