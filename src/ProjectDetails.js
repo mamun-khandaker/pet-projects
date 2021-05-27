@@ -36,9 +36,16 @@ const ProjectDetails = [
 
   {
     name: 'Tabs',
-    image: 'images/test_image.jpeg',
+    image: 'images/tabs.png',
     path: '/tabs',
     id: 6
+  },
+
+  {
+    name: 'Slider',
+    image: 'images/slider.png',
+    path: '/slider',
+    id: 7
   }
 ]
 
