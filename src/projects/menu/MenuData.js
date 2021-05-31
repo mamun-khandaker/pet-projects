@@ -1,7 +1,7 @@
 const MenuData = [
   {
     id: 1,
-    title: 'Vegetable Salad',
+    title: 'Chinese Vegetable',
     category: 'Lunch',
     price: 14.5,
     image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
@@ -28,9 +28,9 @@ const MenuData = [
 
   {
     id: 4,
-    title: 'Vegetable Thali',
+    title: 'Vegetable Masala',
     category: 'Lunch',
-    price: 14.5,
+    price: 24.5,
     image: 'https://images.unsplash.com/photo-1496412705862-e0088f16f791?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
     desc: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC'
   },
@@ -39,7 +39,7 @@ const MenuData = [
     id: 5,
     title: 'Chocolate Cake',
     category: 'Breakfast',
-    price: 4.5,
+    price: 8.5,
     image: 'https://images.unsplash.com/photo-1504113888839-1c8eb50233d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1015&q=80',
     desc: 'On the contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.'
   },
@@ -48,7 +48,7 @@ const MenuData = [
     id: 6,
     title: 'Fruit Salad',
     category: 'Breakfast',
-    price: 8.5,
+    price: 11.5,
     image: 'https://images.unsplash.com/photo-1494390248081-4e521a5940db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=995&q=80',
     desc: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
   },
@@ -57,7 +57,7 @@ const MenuData = [
     id: 7,
     title: 'Vegetable Thali',
     category: 'Lunch',
-    price: 10.5,
+    price: 17,
     image: 'https://images.unsplash.com/photo-1534080564583-6be75777b70a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
     desc: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.'
   },
@@ -66,16 +66,16 @@ const MenuData = [
     id: 8,
     title: 'Strawberry Mix',
     category: 'Dinner',
-    price: 4.5,
+    price: 41.5,
     image: 'https://images.unsplash.com/photo-1600251822621-d11a7854e093?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80',
     desc: 'On the other hand contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45'
   },
 
   {
     id: 9,
-    title: 'Fruit Salad',
+    title: 'Fruit Mix',
     category: 'Dinner',
-    price: 18.5,
+    price: 16.5,
     image: 'https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80',
     desc: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
   },

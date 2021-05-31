@@ -7,6 +7,9 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -14,9 +17,6 @@ p {
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   background: #f7f7f2;
 }
@@ -191,5 +191,19 @@ header {
 @keyframes loader {
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.input-field {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 0;
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   }
 }
