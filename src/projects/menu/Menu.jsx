@@ -1,17 +1,20 @@
 import './menu.scss';
-import React, { useState } from  'react';
+import React, { useState, useEffect } from  'react';
 import { BiSearchAlt } from 'react-icons/bi';
 import MenuData from './MenuData';
 import SingleMenu from './SingleMenu';
 import Categories from './Categories';
+// import ReactPaginate from 'react-paginate';
 
 const allCategories = ['All', ...new Set(MenuData.map(cat => cat.category))];
 
 const Menu = () => {
   const [menuItems, setMenuItems] = useState(MenuData);
   const [categories] = useState(allCategories);
-  const [searchKey, setSearchKey] = useState('');
-  const [filter, setFilter] = useState([]);
+  const [priceSearchKey, setPriceSearchKey] = useState({
+    minPrice: 0,
+    maxPrice: 0
+  })
 
   const filterItem = (category) => {
     if(category === 'All') {
@@ -23,18 +26,46 @@ const Menu = () => {
     setMenuItems(newCategory);
   }
 
-  const searchResult = (e) => {
+  const onSearch = (e) => {
     const value = e.target.value;
-    setSearchKey(value);
 
-    if (searchKey !== '') {
-      const filteredProducts = menuItems.filter(menu => {
-        return Object.values(menu).join(' ').toLowerCase().includes(searchKey.toLowerCase())
+    if (value !== '') {
+      const filteredProducts = MenuData.filter(menu => {
+        return Object.values(menu).join(' ').toLowerCase().includes(value.toLowerCase())
       })
-      setFilter(filteredProducts);
+      setMenuItems(filteredProducts);
     } else {
-      return menuItems;
+      return MenuData;
     }
+  }
+
+  const priceSearchResult = (e) => {
+    const field = e.target.name;
+    
+    setPriceSearchKey(prevValue => {
+      if(field === 'minPrice') {
+        return {
+          minPrice: e.target.value,
+          maxPrice: prevValue.maxPrice
+        }
+
+      } else if (field === 'maxPrice') {
+        return {
+          minPrice: prevValue.minPrice,
+          maxPrice: e.target.value
+        }
+      }
+    })
+  }
+
+  const priceSearch = (e) => {
+    e.preventDefault();
+    const priceSearchItems = menuItems.filter(item => {
+      if(item.price >= priceSearchKey.minPrice && item.price <= priceSearchKey.maxPrice) {
+        return item;
+      }
+    });
+    setMenuItems(priceSearchItems);
   }
 
   return (
@@ -47,14 +78,20 @@ const Menu = () => {
         <Categories filterItem={filterItem} categories={categories} />
 
         <div className="menu-search">
-          <div className="menu-search-input">
-            <input type="text" onChange={searchResult} value={searchKey} className="input-field" placeholder="Search items" />
-            <button className="menu-search-btn"><BiSearchAlt /></button>
-          </div>
+            <div className="menu-search-input">
+              <input type="text" autoFocus onChange={(e) => onSearch(e)} className="input-field" placeholder="Search items" />
+              <button className="menu-search-btn"><BiSearchAlt /></button>
+            </div>
+            <form className="menu-search-range" onSubmit={priceSearch}>
+              <input type="number" name="minPrice" autoFocus onChange={(e) => priceSearchResult(e)} className="input-field" placeholder="Min price" />
+            <input type="number" name="maxPrice" onChange={(e) => priceSearchResult(e)} className="input-field" placeholder="Max price" />
+              <button className="button button-medium">Search</button>
+            </form>
+          
         </div>
 
         <div className="menu">
-          <SingleMenu items={searchKey.length < 1 ? menuItems : filter} />
+          <SingleMenu items={menuItems} />
         </div>
       </div>
     </div>
