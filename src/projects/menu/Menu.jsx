@@ -1,10 +1,9 @@
 import './menu.scss';
-import React, { useState, useEffect } from  'react';
+import React, { useState } from  'react';
 import { BiSearchAlt } from 'react-icons/bi';
 import MenuData from './MenuData';
 import SingleMenu from './SingleMenu';
 import Categories from './Categories';
-// import ReactPaginate from 'react-paginate';
 
 const allCategories = ['All', ...new Set(MenuData.map(cat => cat.category))];
 
@@ -78,16 +77,16 @@ const Menu = () => {
         <Categories filterItem={filterItem} categories={categories} />
 
         <div className="menu-search">
-            <div className="menu-search-input">
-              <input type="text" autoFocus onChange={(e) => onSearch(e)} className="input-field" placeholder="Search items" />
-              <button className="menu-search-btn"><BiSearchAlt /></button>
-            </div>
-            <form className="menu-search-range" onSubmit={priceSearch}>
-              <input type="number" name="minPrice" autoFocus onChange={(e) => priceSearchResult(e)} className="input-field" placeholder="Min price" />
-            <input type="number" name="maxPrice" onChange={(e) => priceSearchResult(e)} className="input-field" placeholder="Max price" />
-              <button className="button button-medium">Search</button>
-            </form>
+          <div className="menu-search-input">
+            <input type="text" autoFocus onChange={(e) => onSearch(e)} className="input-field" placeholder="Search items" />
+            <button className="menu-search-btn"><BiSearchAlt /></button>
+          </div>
           
+          <form className="menu-search-range" onSubmit={priceSearch}>
+            <input type="number" name="minPrice" onChange={(e) => priceSearchResult(e)} className="input-field" placeholder="Min price" />
+          <input type="number" name="maxPrice" onChange={(e) => priceSearchResult(e)} className="input-field" placeholder="Max price" />
+            <button className="button button-medium">Search</button>
+          </form>          
         </div>
 
         <div className="menu">

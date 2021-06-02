@@ -207,3 +207,39 @@ header {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   }
 }
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+
+  li {
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: none;
+    background: #fff;
+
+    &:last-of-type {
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    &.active {
+      background: #666;
+      color: #fff;
+    }
+
+    &.disabled {
+      color: #999;
+      background: #efefef;
+      text-shadow: 1px 1px 0 #fff;
+      cursor: default;
+    }
+
+    a {
+      display: block;
+      padding: 5px 10px;
+    }
+  }
+}
+
