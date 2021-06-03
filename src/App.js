@@ -9,6 +9,7 @@ import UnderConstruction from './components/UnderConstruction';
 import Menu from './projects/menu/Menu';
 import Tabs from './projects/tabs/Tabs';
 import Slider from './projects/slider/Slider';
+import Lipsum from './projects/lipsum/Lipsum';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/menu" component={Menu} />
           <Route path="/tabs" component={Tabs} />
           <Route path="/slider" component={Slider} />
+          <Route path="/lorem-ipsum" component={Lipsum} />
           <Route component={UnderConstruction} />
         </Switch>
       </div>

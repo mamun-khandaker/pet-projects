@@ -46,6 +46,13 @@ const ProjectDetails = [
     image: 'images/slider.png',
     path: '/slider',
     id: 7
+  },
+
+  {
+    name: 'Lorem Ipsum',
+    image: 'images/lipsum.png',
+    path: '/lorem-ipsum',
+    id: 8
   }
 ]
 
