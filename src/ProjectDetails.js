@@ -53,6 +53,13 @@ const ProjectDetails = [
     image: 'images/lipsum.png',
     path: '/lorem-ipsum',
     id: 8
+  },
+
+  {
+    name: 'Color Generator',
+    image: 'images/color_gen.png',
+    path: '/color-gen',
+    id: 9
   }
 ]
 
