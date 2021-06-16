@@ -11,6 +11,7 @@ import Tabs from './projects/tabs/Tabs';
 import Slider from './projects/slider/Slider';
 import Lipsum from './projects/lipsum/Lipsum';
 import ColorGen from './projects/color-generator/ColorGen';
+import Grocery from './projects/grocery/Grocery';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/slider" component={Slider} />
           <Route path="/lorem-ipsum" component={Lipsum} />
           <Route path="/color-gen" component={ColorGen} />
+          <Route path="/grocery" component={Grocery} />
           <Route component={UnderConstruction} />
         </Switch>
       </div>

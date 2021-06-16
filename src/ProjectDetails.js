@@ -60,6 +60,13 @@ const ProjectDetails = [
     image: 'images/color_gen.png',
     path: '/color-gen',
     id: 9
+  },
+
+  {
+    name: 'Grocery Item List',
+    image: 'images/test_image.jpeg',
+    path: '/grocery',
+    id: 10
   }
 ]
 
