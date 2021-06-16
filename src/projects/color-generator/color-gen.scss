@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+
+.color-gen {
+  &-container {
+    margin: 0 0 20px;
+  }
+}
+
+.colors {
+  display: grid;
+  font-size: 14px;
+  font-weight: 500;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  // grid-template-rows: repeat(auto-fit, minmax(130px, 1fr));
+
+  p:last-of-type {
+    margin: 0;
+  }
+
+  &-input {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px;
+
+    .input-field {
+      margin: 0 0 0 15px;
+      max-width: 300px;
+    }
+  }
+
+  &-single {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    padding: 35px 20px;
+    position: relative;
+  }
+
+  &-light {
+    color: #fff;
+  }
+}
+
+.error {
+  border-color: red;
+}
+
+.alert {
+  font-weight: 300;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
