@@ -11,7 +11,19 @@
       align-items: center;
       border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
       display: flex;
-      padding: 15px 0;
+      padding: 15px;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.03);
+      }
+
+      &.complete {
+        background: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    &-holder {
+      position: relative;
     }
   }
 
@@ -46,5 +58,28 @@
   &-clear {
     margin: 20px 0 0;
     text-align: center;
+  }
+}
+
+.empty-list {
+  margin: 20px 0 0;
+  text-align: center;
+}
+
+.item-alert {
+  font-size: 14px;
+  margin: 0 0 20px;
+  padding: 5px 0;
+  position: absolute;
+  text-align: center;
+  top: -30px;
+  width: 100%;
+
+  &-success {
+    color: green;
+  }
+  
+  &-danger {
+    color: red;
   }
 }

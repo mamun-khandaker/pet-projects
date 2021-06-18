@@ -64,7 +64,7 @@ const ProjectDetails = [
 
   {
     name: 'Grocery Item List',
-    image: 'images/test_image.jpeg',
+    image: 'images/grocery_list.png',
     path: '/grocery',
     id: 10
   }
