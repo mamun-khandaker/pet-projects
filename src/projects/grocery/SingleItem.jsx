@@ -3,10 +3,7 @@ import { MdDelete } from 'react-icons/md';
 import { RiEdit2Fill } from 'react-icons/ri';
 import { IoCheckmarkDoneSharp } from 'react-icons/io5';
 
-const SingleItem = ({ list, removeItem }) => {
-  const handleDelete = (id) => {
-    removeItem(id)
-  }
+const SingleItem = ({ list, removeItem, editItem }) => {
   return (
     <ul className="grocery-list">
       {list.map(newItem => {
@@ -22,11 +19,11 @@ const SingleItem = ({ list, removeItem }) => {
                 <IoCheckmarkDoneSharp />
               </button>
 
-              <button className="button">
+              <button className="button" onClick={() => editItem(id)}>
                 <RiEdit2Fill />
               </button>
 
-              <button className="button" onClick={() => handleDelete(id)}>
+              <button className="button" onClick={() => removeItem(id)}>
                 <MdDelete />
               </button>
             </div>
