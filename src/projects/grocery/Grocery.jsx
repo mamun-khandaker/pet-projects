@@ -3,11 +3,20 @@ import React, { useState, useEffect } from 'react';
 import SingleItem from './SingleItem';
 import Alert from './Alert';
 
+const getLocalStorage = () => {
+  let list = localStorage.getItem('list');
+  if (list) {
+    return JSON.parse(list)
+  } else {
+    return []
+  }
+}
+
 const Grocery = () => {
   const [name, setName] = useState('');
   const [edit, setEdit] = useState(false);
   const [editId, setEditId] = useState(null);
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(getLocalStorage);
   const [alert, setAlert] = useState({
     show: false,
     message: '',
@@ -71,6 +80,10 @@ const Grocery = () => {
     setEditId(id);
     setName(specificItem.title)
   }
+
+  useEffect(() => {
+    localStorage.setItem('list', JSON.stringify(list))
+  }, [list])
 
   return (
     <div className="grocery">
