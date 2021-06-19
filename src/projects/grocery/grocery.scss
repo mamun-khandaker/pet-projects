@@ -1,0 +1,85 @@
+.grocery {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  max-width: 700px;
+  padding: 15px 25px;
+
+  &-list {
+    li {
+      align-items: center;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
+      display: flex;
+      padding: 15px;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.03);
+      }
+
+      &.complete {
+        background: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    &-holder {
+      position: relative;
+    }
+  }
+
+  &-add {
+    display: flex;
+    margin: 0 0 20px;
+
+    .input-field {
+      flex: 1;
+    }
+  }
+
+  &-item {
+    flex: 1;
+  }
+
+  &-actions {
+    margin: 0 0 0 15px;
+
+    .button {
+      background: none;
+      color: #666;
+      display: inline-flex;
+      padding: 4px 5px;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  &-clear {
+    margin: 20px 0 0;
+    text-align: center;
+  }
+}
+
+.empty-list {
+  margin: 20px 0 0;
+  text-align: center;
+}
+
+.item-alert {
+  font-size: 14px;
+  margin: 0 0 20px;
+  padding: 5px 0;
+  position: absolute;
+  // text-align: center;
+  top: -30px;
+  width: 100%;
+
+  &-success {
+    color: green;
+  }
+  
+  &-danger {
+    color: red;
+  }
+}
