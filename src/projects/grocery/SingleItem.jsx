@@ -15,10 +15,6 @@ const SingleItem = ({ list, removeItem, editItem }) => {
             </div>
 
             <div className="grocery-actions">
-              <button className="button">
-                <IoCheckmarkDoneSharp />
-              </button>
-
               <button className="button" onClick={() => editItem(id)}>
                 <RiEdit2Fill />
               </button>
