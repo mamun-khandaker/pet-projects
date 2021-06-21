@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdDelete } from 'react-icons/md';
 import { RiEdit2Fill } from 'react-icons/ri';
-import { IoCheckmarkDoneSharp } from 'react-icons/io5';
+// import { IoCheckmarkDoneSharp } from 'react-icons/io5';
 
 const SingleItem = ({ list, removeItem, editItem }) => {
   return (
