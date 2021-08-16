@@ -67,6 +67,13 @@ const ProjectDetails = [
     image: 'images/grocery_list.png',
     path: '/grocery',
     id: 10
+  },
+
+  {
+    name: 'Navbar',
+    image: 'images/navbar.png',
+    path: '/navbar',
+    id: 11
   }
 ]
 

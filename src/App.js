@@ -12,6 +12,7 @@ import Slider from './projects/slider/Slider';
 import Lipsum from './projects/lipsum/Lipsum';
 import ColorGen from './projects/color-generator/ColorGen';
 import Grocery from './projects/grocery/Grocery';
+import Navbar from './projects/navbar/Navbar';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/lorem-ipsum" component={Lipsum} />
           <Route path="/color-gen" component={ColorGen} />
           <Route path="/grocery" component={Grocery} />
+          <Route path="/navbar" component={Navbar} />
           <Route component={UnderConstruction} />
         </Switch>
       </div>
