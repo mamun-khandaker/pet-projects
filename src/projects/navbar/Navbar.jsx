@@ -4,31 +4,38 @@ import { Link } from 'react-router-dom';
 import Links from './Links';
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const [isMobile] = useState(window.innerWidth < 768);
+  const [open, setOpen] = useState(true);
   const navigationRef = useRef(null);
   const navigationHolderRef = useRef(null);
 
-  useEffect(() => {
+
+  const toggleMenu = () => {
     const linkHeight = navigationRef.current.offsetHeight;
     if (open) {
       navigationHolderRef.current.style.height = `${linkHeight}px`;
     } else {
       navigationHolderRef.current.style.height = 0;
     }
-  }, [open])
+  }
 
-  window.addEventListener('resize', function () {
-    if (!isMobile) {
-      navigationHolderRef.current.style.height = 'auto';
-    }
-    console.log(navigationHolderRef.current.height)
-  });
+  const resizeWindow = () => {
+    window.addEventListener('resize', function () {
+      if (window.innerWidth < 768) {
+        navigationHolderRef.current.style.height = 'auto';
+      }
+    });
+  }
+
+  useEffect(() => {
+    toggleMenu();
+    resizeWindow();
+  }, [open])
+  
 
   return (
     <div className="navbar-holder">
       <h2 className="title">
-        <span>Navbar <small>Shrink the window</small></span>
+        <span>Navbar <small>(Shrink the window)</small></span>
       </h2>
 
       <nav className="navbar">
