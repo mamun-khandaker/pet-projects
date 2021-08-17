@@ -74,6 +74,13 @@ const ProjectDetails = [
     image: 'images/navbar.png',
     path: '/navbar',
     id: 11
+  },
+
+  {
+    name: 'Sidebar and Modal',
+    image: 'images/test_image.jpeg',
+    path: '/sidebar',
+    id: 12
   }
 ]
 

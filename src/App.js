@@ -13,6 +13,7 @@ import Lipsum from './projects/lipsum/Lipsum';
 import ColorGen from './projects/color-generator/ColorGen';
 import Grocery from './projects/grocery/Grocery';
 import Navbar from './projects/navbar/Navbar';
+import SidebarApp from './projects/sidebar/SidebarApp';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       <header>
         <div className="container">
           <h1 className="title-main">
-            <Link to="/">My pet projects</Link>
+            <Link to="/">My Short Projects</Link>
           </h1>
         </div>
       </header>
@@ -39,6 +40,7 @@ function App() {
           <Route path="/color-gen" component={ColorGen} />
           <Route path="/grocery" component={Grocery} />
           <Route path="/navbar" component={Navbar} />
+          <Route path="/sidebar" component={SidebarApp} />
           <Route component={UnderConstruction} />
         </Switch>
       </div>
