@@ -8,16 +8,6 @@ const Navbar = () => {
   const navigationRef = useRef(null);
   const navigationHolderRef = useRef(null);
 
-
-  const toggleMenu = () => {
-    const linkHeight = navigationRef.current.offsetHeight;
-    if (open) {
-      navigationHolderRef.current.style.height = `${linkHeight}px`;
-    } else {
-      navigationHolderRef.current.style.height = 0;
-    }
-  }
-
   const resizeWindow = () => {
     window.addEventListener('resize', function () {
       if (window.innerWidth < 768) {
@@ -27,6 +17,14 @@ const Navbar = () => {
   }
 
   useEffect(() => {
+    const toggleMenu = () => {
+      const linkHeight = navigationRef.current.offsetHeight;
+      if (open) {
+        navigationHolderRef.current.style.height = `${linkHeight}px`;
+      } else {
+        navigationHolderRef.current.style.height = 0;
+      }
+    }
     toggleMenu();
     resizeWindow();
   }, [open])

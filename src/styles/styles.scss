@@ -172,6 +172,17 @@ header {
     font-size: 14px;
     padding: 8px 20px;
   }
+
+  &-icon {
+    background: none;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 0;
+
+    &:hover {
+      background: none;
+    }
+  }
 }
 
 .loader {
