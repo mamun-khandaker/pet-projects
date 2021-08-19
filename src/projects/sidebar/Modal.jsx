@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { CgClose } from 'react-icons/cg';
+import { useCustomHook } from './SidebarContext';
 
 const Modal = () => {
+  const { isModalOpen, toggleModal } = useCustomHook();
+  const modalRef = useRef();
+
+  useEffect(() => {
+    const checkIfClickedOutside = e => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (isModalOpen && modalRef.current && !modalRef.current.contains(e.target)) {
+        toggleModal(false)
+      }
+    }
+    document.addEventListener("mousedown", checkIfClickedOutside)
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside)
+    }
+  }, [isModalOpen])
+
   return (
-    <div className="modal-overlay">
-      <div className="modal">
-        <button type="button" className="modal-close">
+    <div className={`${isModalOpen ? "modal-overlay modal-open" : "modal-overlay"}`}>
+      <div className="modal" ref={modalRef}>
+        <button type="button" className="modal-close" onClick={toggleModal}>
           <CgClose />
         </button>
 

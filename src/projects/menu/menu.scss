@@ -3,7 +3,6 @@
 .menu {
   display: flex;
   flex-flow: row wrap;
-  flex-flow: row wrap;
 
   @include viewport-is(tab-mobile) {
     display: block;

@@ -78,7 +78,7 @@ const ProjectDetails = [
 
   {
     name: 'Sidebar and Modal',
-    image: 'images/test_image.jpeg',
+    image: 'images/sidebar.png',
     path: '/sidebar',
     id: 12
   }
